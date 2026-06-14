@@ -1,0 +1,99 @@
+/* Popup principal */
+#traduzirPopup {
+  position: absolute;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 12px;
+  width: 320px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 999999;
+  animation: aparecer 0.18s cubic-bezier(.2,.9,.2,1);
+}
+
+/* Header com badge */
+#traduzirPopup .tp-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.tp-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3f5f1b 0%, #000000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(63,95,27,0.18);
+}
+
+.tp-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Corpo do popup */
+#traduzirPopup .tp-body {
+  color: #666666;
+  line-height: 1.35;
+  padding: 6px 0;
+}
+
+/* Ações (botões) */
+.tp-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tp-btn {
+  flex: 1;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #3f5f1b;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(63,95,27,0.15);
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+.tp-btn.secondary {
+  background: transparent;
+  color: #3f5f1b;
+  border: 1px solid #e5e5e5;
+  box-shadow: none;
+}
+
+.tp-btn:hover { transform: translateY(-2px); }
+.tp-btn:active { transform: translateY(0); opacity: 0.95; }
+
+/* Inputs e áreas de texto internas */
+#traduzirPopup input, #traduzirPopup textarea, #traduzirPopup select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+/* Pequeno separador */
+.tp-separator { height: 1px; background: #e5e5e5; margin: 10px 0; border-radius: 1px; }
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
